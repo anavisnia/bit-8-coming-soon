@@ -25,4 +25,4 @@ Design: [Matrox coming soon](https://cdn.discordapp.com/attachments/648536139677
 
 ## Authors
 
-[Rimantas](https://github.com/anavisnia)<br>
+[Ana](https://github.com/anavisnia)<br>
