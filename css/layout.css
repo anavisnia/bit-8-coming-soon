@@ -51,6 +51,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+  /* mobilioj versijoi jie turi tapti viso ekrano */
   .container > .row-short {
     width: 100%;
     margin-left: 0;
@@ -59,6 +60,7 @@
     width: 100%;
     margin-left: 0;
   }
+  /* uzima 100% savo teva */
   .container > .row > .column.left {
     width: 100%;
   }
