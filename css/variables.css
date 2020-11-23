@@ -2,6 +2,9 @@
 
 :root {
   --section-padding: 30px;
-  --main-color: #1ab3f6;
   --hero-space: 20px;
+  --main-space: 20px;
+  --main-color: #1ab3f6;
+  --secondary-color: #ea1e65;
+  --grey-color: #444;
 }

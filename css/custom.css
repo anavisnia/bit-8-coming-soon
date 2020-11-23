@@ -18,8 +18,6 @@ footer.container > .row-short {
 
 /* hero */
 .hero {
-  display: inline-block;
-  width: 100%;
   text-align: center;
 }
 .hero img {
@@ -39,7 +37,7 @@ footer.container > .row-short {
   width: 100%;
   margin-bottom: calc(var(--hero-space) * 3);
   font-size: 18px;
-  color: #555;
+  color: var(--grey-color);
 }
 .hero .clock {
   margin-bottom: calc(var(--hero-space) * 2);
@@ -50,5 +48,24 @@ footer.container > .row-short {
 }
 
 /* main-content */
-
+main h2 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: var(--main-space);
+  color: black;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+main p {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: var(--main-space);
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--grey-color);
+}
+main p > a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
 /* footer */
