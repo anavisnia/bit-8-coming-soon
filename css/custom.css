@@ -49,7 +49,20 @@ footer.container > .row-short {
 }
 
 .hero .form {
+  width: 90%;
   margin-bottom: var(--hero-space);
+}
+.hero .form > input {
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+  border-bottom-color: #fff;
+}
+.hero .form > input::placeholder {
+  color: #fff;
+}
+.hero .form > .btn {
+  float: none;
 }
 
 /* main-content */
