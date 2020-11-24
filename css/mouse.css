@@ -1,2 +1,37 @@
 .mouse {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  border: 15px solid #fff;
+  border-radius: 100px;
+}
+
+.mouse > .wheel {
+  display: inline-block;
+  width: 15px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-top: 50px;
+  /* pavadinimas animacijos */
+  animation-name: peliukas;
+  /* kiek laiko ji trunka */
+  animation-duration: 1.5s;
+  /* kiek kartu kartoti animacija */
+  animation-iteration-count: infinite;
+}
+/* scenarijus animacijai (nuo pradzios iki pabaigos)*/
+@keyframes peliukas {
+  /* relativus laikas */
+  0% {
+    margin-top: 50px;
+    background-color: #ffff;
+  }
+  50% {
+    background-color: #ffff;
+  }
+  100% {
+    margin-top: 180px;
+    background-color: #fff0;
+  }
 }
