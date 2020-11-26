@@ -1,4 +1,12 @@
-function isInputValidation (data) {
+function isInputValidation (selector, data) {
+    if (typeof selector !== 'string') {
+        console.error('ERROR: selectorius turi buti tekstinio tipo.');
+        return false;
+    }
+    if (typeof selector === '') {
+        console.error('ERROR: selectorius negali buti tuscias.');
+        return false;
+    }
     if (Array.isArray(data) === false) {
         console.error('ERROR: social ikonom generuoti reikia array tipo duomenu.');
         return false;
