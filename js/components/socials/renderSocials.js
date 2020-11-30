@@ -28,7 +28,7 @@ function renderSocials(selector, data) {
         if (!isValidSocialItem(item)) { // jeigu nevalidus, tai eik toliau per sarasa
             continue;
         }
-        HTML += `<a href="${item.link}" target="_blank" class="fa fa-${item.icon}" aria-hidden="true"></a>`;
+        HTML += `<a href="${item.link}" target="_blank" class="social fa fa-${item.icon}" aria-hidden="true"></a>`;
     }
     
     // post logic validation / ar prasuktos duomenis yra taisingi?
@@ -39,7 +39,7 @@ function renderSocials(selector, data) {
     
     
     //return / jeigu taip - return
-    socialsDOM.innerHTML = HTML;
+    socialsDOM.innerHTML += HTML;
     return true;
 }
 
