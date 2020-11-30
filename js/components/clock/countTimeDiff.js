@@ -14,7 +14,6 @@ function countTimeDiff() {
     // einamasis laikas yyyy-mm-dd hh:mm:ss
     const currentTimeMiliseconds = date.getTime();
 
-
     // suskaiciojame laiko skirtuma
     const timeLeft = newYearMiliseconds - currentTimeMiliseconds;
     let secondsLeft = timeLeft / 1000;
