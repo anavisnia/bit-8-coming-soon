@@ -23,7 +23,31 @@ function renderAllProgressBars(data) {
 
         renderProgressBar(bar.selector, bar.title, bar.value);
     }
-    
+
+    // pazymeti/rasti visus tris progress barus
+    const allProgressBars = document.querySelectorAll('.progress-bar');
+
+    // uzduoti stebetoja, skrolinimo ivikio
+    window.addEventListener('scroll', () => {
+        const screenBottom = window.innerHeight + window.scrollY;
+        // dirnti su nariu (bar) is saraso/dauguma objektu (allProgressBars)
+        for (let bar of allProgressBars) {
+            // keik aukstai jis yra elemenyo apacioje
+            const barBottom = bar.offsetHeight + bar.offsetTop;
+            if (screenBottom >= barBottom) {
+                bar.classList.add('animate');
+            }
+
+        }
+
+        //offsetHeight: 48
+        // offsetLeft: 99 // kiek nuo ekrano atstumtas
+        // offsetTop: 1140 // kiek atsistumes nuo body el.
+        // offsetWidth: 500
+    })
+
+
+
     return true;
 }
 
