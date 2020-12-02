@@ -3,4 +3,10 @@ import { isValidName } from './isValidName.js';
 import { isValidText } from './isValidText.js';
 
 
-export {isValidText, isValidName, isValidEmail}
+const validation = {
+    text: isValidText, 
+    name: isValidName, 
+    email: isValidEmail
+}
+
+export { validation }
