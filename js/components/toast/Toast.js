@@ -27,7 +27,7 @@ class Toast {
 
     // metodas kuris sukurs html elem
     render() {
-        const HTML =    `<div class="toast visible">
+        const HTML =    `<div class="toast">
                             <i class="fa fa-check"></i>
                             <p>Your message here...</p>
                             <i class="fa fa-times"></i>
