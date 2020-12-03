@@ -33,18 +33,15 @@
   color: #fff;
 }
 .toast.error > .fa.fa-check {
-  background-color: green;
-  color: #fff;
+  display: none;
 }
 .toast.error > .fa.fa-shield {
-  display: none;
-  background-color: red;
-  color: #fff;
+  display: inline-block;
 }
 .toast > p {
   display: inline-block;
   float: left;
-  width: 178px;
+  width: 180px;
   padding: 10px;
   line-height: 20px;
   font-size: 16px;
