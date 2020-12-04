@@ -19,5 +19,5 @@ const toast = new Toast();
 toast.render();
 toast.show('error', 'cia yra klaida');
 
-formValidator('.hero .form');
-formValidator('main .form');
+formValidator('.hero .form', toast);
+formValidator('main .form'), toast;

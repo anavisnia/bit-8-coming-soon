@@ -2,13 +2,23 @@
 import { validation } from './validationRules.js'; // biblioteka validacijos objektu, kurui reikia validuti ir kaip validuoti
 
 // console.log(validation);
+/**
+ * Formos valodavima atliekanti funkcija, kuri automatiskai atpazista kuriems ivestiems laukams kokias reikia taikyti valydacijos taisykles ir pagal tai atvaizduoja atitinkamus pranesimus.
+ * @param {string} selector CSS like selektor.
+ * @param {Object} toastObject Objektas. i kuri reikia kreiptis, norint atvaizduoti pranisimus: tiek sekmes, tiek klaidos.
+ * @returns {boolean} unkcijai sekmingai suveikus, grazinamas `true`, priesingu atveju `false`.
+ */
+function formValidator(selector, toastObject) {
+    console.log(selector);
+    console.log(toastObject);
 
-function formValidator(selector) {
+
     const formDOM = document.querySelector(selector);
     const submitBtnDOM = formDOM.querySelector('input[type="submit"]');
 
     if (!submitBtnDOM) {
-        console.error('ERROR: formoje nerastas input:submit mygtukas.');
+        toastObject.show('error', 'ERROR: formoje nerastas input:submit mygtukas.')
+        // console.error('ERROR: formoje nerastas input:submit mygtukas.');
         return false;
     }
 
@@ -23,7 +33,8 @@ function formValidator(selector) {
     }
 
 
-    submitBtnDOM.addEventListener('click', () => {
+    submitBtnDOM.addEventListener('click', (event) => {
+        event.preventDefault();
         let errorCount = 0;
         console.clear();
 
@@ -35,8 +46,10 @@ function formValidator(selector) {
             const validationFunction = validation[validationRule];
             const error = validationFunction(text);
             if(error !== true) {
+                toastObject.show('error', error);
                 console.log(error);
                 errorCount++;
+                break; // padaro, jog klaidos pranesima miestu ties pirma sutikta klaida
             }
 
         }
@@ -45,6 +58,8 @@ function formValidator(selector) {
             console.log('Siumciam info...');
         }
     })
+
+    return true;
 }
 
 export { formValidator }
