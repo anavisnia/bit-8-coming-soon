@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/mouse.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/progress-bar.css">
+    <link rel="stylesheet" href="./css/toast.css">
     <!-- custom -->
     <link rel="stylesheet" href="./css/custom.css">
 </head>
@@ -45,9 +46,8 @@
                 </div>
             </div>
             <form action="" class="form">
-                <input type="email" name="" id="" placeholder="Email" required>
-                <!-- <input type="submit" value="Subscribe now!"> -->
-                <div class="btn">Subscribe now!</div>
+                <input type="email" placeholder="Email" required data-validation="email">
+                <input type="submit" class="btn" value="Subscribe now!">
             </form>
             <div class="mouse">
                 <div class="wheel"></div>
@@ -65,11 +65,10 @@
                 <h2>Have any questions?</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <a href="mailto:vardenis@pastelis.xyz">vardenis@pastelis.xyz</a> excepturi a veniam nesciunt beatae aut ullam sapiente blanditiis placeat quos.</p>
                 <form action="" class="form">
-                    <input type="text" name="" id="" placeholder="Name" required>
-                    <input type="email" name="" id="" placeholder="Email" required>
-                    <textarea maxlength="1000" placeholder="Message" required></textarea>
-                    <!-- <input type="submit" value="Send Message"> -->
-                    <div class="btn">Send message</div>
+                    <input type="text" placeholder="Name" required data-validation="name">
+                    <input type="email" placeholder="Email" required data-validation="email">
+                    <textarea maxlength="1000" placeholder="Message" required data-validation="text"></textarea>
+                    <input type="submit" class="btn" value="Send Message">
                 </form>
             </div>
         </div>

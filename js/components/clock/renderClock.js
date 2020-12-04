@@ -44,7 +44,7 @@ function renderClock (selector) {
     
     DOM.innerHTML = HTML;
     const timesDOM = DOM.querySelectorAll('.time');
-    console.log(timesDOM);
+    // console.log(timesDOM);
 
 
     // paleidziame laikrodzio mechanizma
