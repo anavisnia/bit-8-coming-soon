@@ -20,7 +20,7 @@ class Toast {
         this.DOM.classList.add('visible');
         this.textDOM.innerText = message;
         
-        if (type === 'succsess') {
+        if (type === 'success') {
             this.DOM.classList.remove('error')
         }
         if (type === 'error') {

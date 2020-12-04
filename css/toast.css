@@ -6,7 +6,6 @@
   bottom: 30px;
   transform: translateX(-50%);
   background-color: #fff;
-  border: 1px solid #ccc;
   box-shadow: 0 2px 8px #0008;
 }
 .toast.visible {
@@ -41,9 +40,12 @@
 .toast > p {
   display: inline-block;
   float: left;
-  width: 178px;
+  width: 180px;
   padding: 10px;
   line-height: 20px;
   font-size: 16px;
   color: #333;
 }
+/* .toast > p {
+  width: 178px;
+} */

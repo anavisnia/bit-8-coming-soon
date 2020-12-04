@@ -28,7 +28,7 @@ function formValidator(selector, toastObject) {
     const allElements = [...allInputDOMs, ...allTextareaDOMs];
 
     if (allElements.length === 0) {
-        console.error('ERROR: formoje nerastas nei vieno imputo ar textarea elementu.');
+        toastObject.show('ERROR: formoje nerastas nei vieno imputo ar textarea elementu.');
         return false;
     }
 
@@ -36,7 +36,6 @@ function formValidator(selector, toastObject) {
     submitBtnDOM.addEventListener('click', (event) => {
         event.preventDefault();
         let errorCount = 0;
-        console.clear();
 
         for (let input of allElements) {
             const validationRule = input.dataset.validation; // html'e - data-validation
@@ -47,7 +46,6 @@ function formValidator(selector, toastObject) {
             const error = validationFunction(text);
             if(error !== true) {
                 toastObject.show('error', error);
-                console.log(error);
                 errorCount++;
                 break; // padaro, jog klaidos pranesima miestu ties pirma sutikta klaida
             }
@@ -55,7 +53,7 @@ function formValidator(selector, toastObject) {
         }
 
         if (errorCount === 0) {
-            console.log('Siumciam info...');
+            toastObject.show('success', 'Siumciam info...');
         }
     })
 
